@@ -1,0 +1,817 @@
+{
+	"info": {
+		"_postman_id": "a0efee9b-18cf-4449-9d76-7d0f114c3c25",
+		"name": "ProjetoSaude",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Medicos",
+			"item": [
+				{
+					"name": "Consulta Médico",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/medico/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"medico",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Médico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_medico\": \"Mario Arthur\",\r\n    \"email_medico\": \"marthur@teste.com\",\r\n    \"data_nascimento\": \"02092000\",\r\n    \"salario_base\": 5500.5,\r\n    \"id_departamento\": 3\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/medico/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"medico",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todos Médicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/medico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"medico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Médico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_medico\": 29,\r\n    \"nome_medico\": \"Mario Arthur\",\r\n    \"email_medico\": \"marthur@teste.com\",\r\n    \"data_nascimento\": \"1970-01-01T00:34:52.000+00:00\",\r\n    \"salario_base\": 8500.5,\r\n    \"id_departamento\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/medico/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"medico",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover médico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/medico/remover/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"medico",
+								"remover",
+								"29"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Departamento",
+			"item": [
+				{
+					"name": "Consulta Departamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/departamento/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"departamento",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Departamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ginecologia\",\r\n    \"especialidade_Id\": \"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/departamento/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"departamento",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todos Departamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/departamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"departamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Departamento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"nome_departamento\": \"OUTROS\",\r\n    \"especialidade_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/departamento/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"departamento",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Departamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/departamento/remover/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"departamento",
+								"remover",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especialidade",
+			"item": [
+				{
+					"name": "Consulta especialidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/especialidade/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"especialidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover especialidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/especialidade/remover/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"especialidade",
+								"remover",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Especialidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": null,\r\n    \"name\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/especialidade/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"especialidade",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todas Especialidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/especialidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"especialidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar especialidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"BERCARIO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/especialidade/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"especialidade",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plano",
+			"item": [
+				{
+					"name": "Consultar Plano",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Atendimento Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/atendimento/remover/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"atendimento",
+								"remover",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Atendimento Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_atendimento\": null,\r\n    \"data_atendimento\": \"2023-03-29T13:34:00.000\",\r\n    \"tipo_atendimento\": \"EMER\",\r\n    \"id_cliente\": 3,\r\n    \"id_medico\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/atendimento/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"atendimento",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Atendimento Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_atendimento\": 12,\r\n    \"data_atendimento\": \"2023-03-29T14:34:00.000\",\r\n    \"tipo_atendimento\": \"EMER\",\r\n    \"id_cliente\": 3,\r\n    \"id_medico\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/atendimento/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"atendimento",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todos Atendimentos Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/atendimento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"atendimento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atendimento",
+			"item": [
+				{
+					"name": "Consulta Atendimento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/atendimento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"atendimento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Plano",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/plano/remover/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"plano",
+								"remover",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Plano",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_plano\": null,\r\n    \"nome_plano\": \"UniSaude\",\r\n    \"tipo_plano\": \"PREM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/plano/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"plano",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Plano",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_plano\": null,\r\n    \"nome_plano\": \"UniSaude\",\r\n    \"tipo_plano\": \"PREM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/plano/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"plano",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todos Planos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/plano",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"plano"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Consulta Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"cliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/cliente/remover/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"cliente",
+								"remover",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": null,\r\n    \"nome_cliente\": \"Teste\",\r\n    \"email_cliente\": \"teste@teste.com\",\r\n    \"data_nascimento\": \"02092000\",\r\n    \"id_plano\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/cliente/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"cliente",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 7,\r\n    \"nome_cliente\": \"Teste1\",\r\n    \"email_cliente\": \"teste@teste.com\",\r\n    \"data_nascimento\": \"02092000\",\r\n    \"id_plano\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/cliente/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"cliente",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta Todos Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/saude/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"saude",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
